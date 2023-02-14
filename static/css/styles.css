@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    background-color: rgb(224, 224, 224);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: center;
+    background-color: red;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+header nav ul li a:hover {
+    color: black;
+}
+
+main div#get-img {
+    margin-top: 5px;
+}
+
+main div#get-img input#user-input {
+    width: 100%;
+}
+
+main div#get-img input.button-primary {
+    background-color: black;
+}
+
+main div#results-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 3px;
+}
+
+h1.search-form-title {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    text-align: center;
+    font-size: 24px;
+}
+
+main div#results-container h1#results-title {
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+form#url-form input#link-input, form#query-form input#qinput {
+    width: 100%;
+}
+
+div#results-container div#results img.result-image {
+    height: 120px;
+}
+
+div#results-container div#results img.result-image:hover {
+    cursor: pointer;
+}

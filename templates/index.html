@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA FACTORY · SEARCH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Noto+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="static/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="static/css/skeleton.css" type="text/css">
+    <link rel="stylesheet" href="static/css/styles.css" type="text/css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Search</a></li>
+                    <li><a href="/collection">Collection</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <main>
+            <div class="container" id="get-img">
+                <div class="row">
+                    <div class="six columns">
+                        <h1 class="search-form-title">Link</h1>
+                        <form method="POST" id="url-form" action="/get_from_url">
+                            <input placeholder="Link" type="text" name="linput" id="link-input">
+                            <input class="button-primary u-full-width" type="submit" value="GET">
+                        </form>
+                    </div>
+                    <div class="six columns">
+                        <label for="choose-box-input">
+                            <h1 class="search-form-title">Query Search</h1>
+                            <form method="POST" id="query-form" action="/get_from_query">
+                                <input placeholder="Search query" type="text" name="qinput" id="qinput">
+                                <input class="button-primary u-full-width" type="submit" value="GET">
+                            </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container" id="results-container">
+                <div class="row">
+                    <div class="six columns">
+                        <h1 id="results-title">
+                            Results
+                        </h1>
+                    </div>
+                    <div class="six columns">
+                        <div class="row">
+                            <div class="six columns">
+                                <input type="button" class="button u-full-width" value="SELECT ALL (0)" />
+                            </div>
+                            <div class="six columns">
+                                <input type="button" class="button-primary u-full-width" value="SAVE" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="results">
+                    {% for img in images %}
+                    <img class="result-image" src="{{ img.get('src') }}" alt="result">
+                    {% endfor %}
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
