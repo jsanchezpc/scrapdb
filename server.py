@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, session
+from flaskwebgui import FlaskUI
 from bs4 import BeautifulSoup
 import requests
 
@@ -52,4 +53,5 @@ def reset():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    #app.run(debug=True)
+      FlaskUI(app=app, server="flask").run()
