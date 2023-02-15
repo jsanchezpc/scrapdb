@@ -72,7 +72,28 @@
                 </div>
             </div>
         </main>
+        <footer>
+            <div class="row">
+                <div class="six columns">
+                    <p>Scrapdb uses a webview component to display the ui. You can change the browser component by
+                        entering the route to your .exe broswer file here: </p>
+
+                    <form method="POST" action="/try_browser" method="post"><input type="text" name="chromesrc"
+                            id="chrome-src-input" placeholder="Preferred browser .exe path">
+                    </form>
+                </div>
+                <div class="six columns">
+                    <h1>Scrapdb</h1>
+                    <hr>
+                    <div id="contact-box">
+                        <img class="contact-img" src="static/img/gh.png" width="100px" alt="github image">
+                        <img src="static/img/in.png" width="100px" alt="linkedin image">
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+    <script src="static/js/eListeners.js"></script>
 </body>
 
 </html>

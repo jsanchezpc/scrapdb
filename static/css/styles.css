@@ -2,6 +2,17 @@ body {
     margin: 0;
     background-color: rgb(224, 224, 224);
     font-family: 'Noto Sans', sans-serif;
+    padding-bottom: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border-radius: 10px;
 }
 
 header {
@@ -68,7 +79,8 @@ main div#results-container h1#results-title {
     font-family: 'Montserrat Subrayada', sans-serif;
 }
 
-form#url-form input#link-input, form#query-form input#qinput {
+form#url-form input#link-input,
+form#query-form input#qinput {
     width: 100%;
 }
 
@@ -78,4 +90,24 @@ div#results-container div#results img.result-image {
 
 div#results-container div#results img.result-image:hover {
     cursor: pointer;
+}
+
+footer {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    padding: 24px;
+    width: 69%;
+    border-radius: 0 90px 0 0;
+    position: absolute;
+    bottom: 0;
+}
+
+footer div#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div#contact-box img.contact-img {
+    text-align: center;
 }

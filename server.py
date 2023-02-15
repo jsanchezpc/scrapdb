@@ -54,4 +54,4 @@ def reset():
 
 if __name__ == "__main__":
     #app.run(debug=True)
-      FlaskUI(app=app, server="flask").run()
+      FlaskUI(app=app, server="flask", browser_path="C:\Program Files\Google\Chrome\Application\chrome.exe").run()
